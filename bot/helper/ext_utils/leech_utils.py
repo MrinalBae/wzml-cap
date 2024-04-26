@@ -308,7 +308,7 @@ async def format_filename(file_, user_id, dirpath=None, isMirror=False):
         slit = lcaption.split("|")
         slit[0] = re_sub(r'\{([^}]+)\}', lowerVars, slit[0])
         up_path = ospath.join(dirpath, prefile_)
-        prefile_ = re_sub(r'www\S+', '', prefile_).replace('- ', '', 1).replace('Tamil', '#Tamil').replace('Tam', '#Tam').replace('Malayalam', '#Malayalam').replace('Mal', '#Mal').replace('Telugu', '#Telugu').replace('Tel', '#Tel').replace('Hindi', '#Hindi').replace('Hin', '#Hin').replace('Kannada', '#Kannada').replace('Kan', '#Kan')
+        prefile_ = re_sub(r'www\S+', '', prefile_).replace('- ', '', 1).replace('Tamil', '#Tamil').replace('Tam', '#Tam').replace('Malayalam', '#Malayalam').replace('Mal', '#Mal').replace('Telugu', '#Telugu').replace('Tel', '#Tel').replace('Hindi', '#Hindi').replace('Hin', '#Hin').replace('Kannada', '#Kannada').replace('Kan', '#Kan').replace('240p', '#240p').replace('360p', '#360p').replace('480p', '#480p').replace('540p', '#540p').replace('720p', '#720p').replace('1080p', '#1080p').replace('2160p', '#2160p')
         dur, qual, lang, subs = await get_media_info(up_path, True)
         cap_mono = slit[0].format(
             filename = nfile_,
